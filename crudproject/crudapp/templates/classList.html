@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include necessary CSS stylesheets -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% for i in object_list %}
+    <div class="w3-card-4 card">
+
+        <header class="w3-container w3-blue">
+            <h1>{{ i.slno }}</h1>
+        </header>
+
+        <div class="w3-container">
+            <p>{{ i.name }}</p>
+        </div>
+
+        <footer class="w3-container w3-blue">
+            <h5>{{ i.desc }}</h5>
+        </footer>
+
+    </div>
+    {% endfor %}
+</body>
+</html>
